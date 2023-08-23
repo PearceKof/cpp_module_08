@@ -6,12 +6,12 @@
 /*   By: blaurent <blaurent@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 16:22:57 by blaurent          #+#    #+#             */
-/*   Updated: 2023/08/12 16:24:49 by blaurent         ###   ########.fr       */
+/*   Updated: 2023/08/16 17:39:59 by blaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <MutantStack.hpp>
-
+#include "MutantStack.hpp"
+#include <iostream>
 int main() {
 	MutantStack<int> mstack;
 
