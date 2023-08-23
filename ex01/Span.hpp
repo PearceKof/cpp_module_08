@@ -6,7 +6,7 @@
 /*   By: blaurent <blaurent@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 15:42:24 by blaurent          #+#    #+#             */
-/*   Updated: 2023/08/15 15:11:09 by blaurent         ###   ########.fr       */
+/*   Updated: 2023/08/23 14:45:01 by blaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include <algorithm>
 #include <iterator>
 #include <numeric>
+#include <cstdlib>
+#include <ctime>
 
 class Span
 {
@@ -32,9 +34,11 @@ public:
 	~Span();
 
 	void				addNumber(unsigned int nbr);
-	// void				addNumber(unsigned int smallest_nbr, unsigned int bigest_nbr);
+	void				addNumber();
 	unsigned int		shortestSpan();
 	unsigned int		longestSpan();
+
+	unsigned int		getSize();
 
 	class MaxSizeReachedException  : public std::exception
 	{

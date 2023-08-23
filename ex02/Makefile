@@ -6,12 +6,12 @@
 #    By: blaurent <blaurent@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 15:31:02 by blaurent          #+#    #+#              #
-#    Updated: 2023/08/12 16:09:26 by blaurent         ###   ########.fr        #
+#    Updated: 2023/08/23 14:55:55 by blaurent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= mutant
-SRCS	= main.cpp MutantStack.cpp
+SRCS	= main.cpp
 	
 CC         = c++
 FLAGS    = -Wall -Wextra -Werror -std=c++98

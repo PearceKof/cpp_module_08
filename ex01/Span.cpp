@@ -6,7 +6,7 @@
 /*   By: blaurent <blaurent@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 15:42:31 by blaurent          #+#    #+#             */
-/*   Updated: 2023/08/15 15:18:35 by blaurent         ###   ########.fr       */
+/*   Updated: 2023/08/23 14:54:36 by blaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,22 @@ Span&	Span::operator=( const Span& rhs )
 
 void	Span::addNumber(unsigned int nbr)
 {
-	if (this->container->size() >= size)
+	if (this->container->size() >= this->size)
 		throw Span::MaxSizeReachedException();
 	this->container->push_back(nbr);
 }
 
+void	Span::addNumber()
+{
+	if (this->container->size() >= this->size)
+		throw Span::MaxSizeReachedException();
 
+	std::vector<int> sequence;
+	while ( ( (this->size - this->container->size()) - sequence.size() ) > 0 )
+		sequence.push_back(rand());
+
+	this->container->insert(this->container->end(), sequence.begin(), sequence.end());
+}
 
 unsigned int		Span::shortestSpan()
 {
@@ -76,5 +86,10 @@ unsigned int		Span::longestSpan()
 	for ( iter = newVector.begin() ; iter != newVector.end() ; ++iter)
 		*iter = std::abs(*iter);
 
-	return *std::max_element(newVector.begin() + 1, newVector.end());
+	return *std::max_element(newVector.begin() + 1, newVector.end()) ;
+}
+
+unsigned int		Span::getSize()
+{
+	return this->container->size() ;
 }
