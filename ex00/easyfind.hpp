@@ -6,7 +6,7 @@
 /*   By: blaurent <blaurent@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 15:33:27 by blaurent          #+#    #+#             */
-/*   Updated: 2023/08/15 15:10:10 by blaurent         ###   ########.fr       */
+/*   Updated: 2023/08/24 12:02:46 by blaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <exception>
 
 template <typename T>
-typename T::iterator	easyfind(T& container, int value)
+typename T::iterator	easyfind(T& container, const int& value)
 {
 	if (container.size() == 0)
 		throw std::exception();

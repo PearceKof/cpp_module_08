@@ -6,7 +6,7 @@
 /*   By: blaurent <blaurent@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 15:42:31 by blaurent          #+#    #+#             */
-/*   Updated: 2023/08/23 14:54:36 by blaurent         ###   ########.fr       */
+/*   Updated: 2023/08/24 12:21:29 by blaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ Span::Span( const Span& src ) : size(src.size), container(NULL)
 Span::~Span()
 {
 	delete [] this->container;
+	this->container = NULL;
 }
 
 Span&	Span::operator=( const Span& rhs )
@@ -31,7 +32,10 @@ Span&	Span::operator=( const Span& rhs )
 	if ( this != &rhs )
 	{
 		if ( this->container != NULL )
+		{
 			delete [] this->container;
+			this->container = NULL;
+		}
 		this->size = rhs.size;
 		std::vector<int> *newVector = new std::vector<int>[rhs.container->size()];
 		std::copy(rhs.container->begin(), rhs.container->end(), std::back_inserter(*newVector));
@@ -49,7 +53,7 @@ void	Span::addNumber(unsigned int nbr)
 
 void	Span::addNumber()
 {
-	if (this->container->size() >= this->size)
+	if ( this->container->size() >= this->size )
 		throw Span::MaxSizeReachedException();
 
 	std::vector<int> sequence;

@@ -6,7 +6,7 @@
 /*   By: blaurent <blaurent@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 15:42:24 by blaurent          #+#    #+#             */
-/*   Updated: 2023/08/23 14:45:01 by blaurent         ###   ########.fr       */
+/*   Updated: 2023/08/24 12:59:55 by blaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 # define SPAN_HPP
 
 #include <vector>
-#include <iostream>
 #include <algorithm>
-#include <iterator>
 #include <numeric>
-#include <cstdlib>
 #include <ctime>
 
 class Span
